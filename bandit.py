@@ -127,7 +127,7 @@ class EpsilonGreedy(Bandit):
 
         with open("epsilon_greedy_report.csv", "w", newline="") as file:
             writer = csv.writer(file)
-            writer.writerow(["Trial", "Reward", "Regret"])  # Header
+            writer.writerow(["Trial", "Reward", "Regret"])
             for i, (reward, regret) in enumerate(zip(rewards, regrets), start=1):
                 writer.writerow([i, reward, regret])
 
@@ -175,7 +175,7 @@ class ThompsonSampling(Bandit):
 
         with open("thompson_sampling_report.csv", "w", newline="") as file:
             writer = csv.writer(file)
-            writer.writerow(["Trial", "Reward", "Regret"])  # Header
+            writer.writerow(["Trial", "Reward", "Regret"])
             for i, (reward, regret) in enumerate(zip(self.rewards, self.regrets), start=1):
                 writer.writerow([i, reward, regret])
 
